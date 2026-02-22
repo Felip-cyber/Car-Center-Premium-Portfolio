@@ -1,6 +1,6 @@
 LICENCIA PROPIETARIA - CAR CENTER PREMIUM
 
-Copyright © 2024-2026 Javier Felipe Ramirez Noguera
+Copyright © 2024-2026  Felipe Ramirez Noguera
 TODOS LOS DERECHOS RESERVADOS
 
 ================================================================================
@@ -19,8 +19,7 @@ TÉRMINOS DE LA LICENCIA PROPIETARIA:
 
    Este software y toda su documentación asociada son propiedad exclusiva de:
    
-   Javier Felipe Ramirez Noguera
-   C.C. 79.900.503
+   Felipe Ramirez Noguera
    Bogotá D.C., Colombia
    Email: felipejnoguera1978@gmail.com
 
@@ -144,7 +143,7 @@ TÉRMINOS DE LA LICENCIA PROPIETARIA:
     Al acceder a este repositorio, usted reconoce haber leído, comprendido
     y aceptado estos términos de licencia.
 
-================================================================================
+
 
 REGISTRO DE PROPIEDAD INTELECTUAL:
 
@@ -152,24 +151,21 @@ Copyright registrado automáticamente desde la creación (Art. 51, Ley 23/1982)
 Registro DNDA (Colombia): En proceso de solicitud
 Evidencia de autoría: 150+ commits en GitHub desde enero 2024
 
-================================================================================
 
 INFORMACIÓN DE CONTACTO:
 
-Titular: Javier Felipe Ramirez Noguera
+Titular:  Felipe Ramirez Noguera
 Email: felipejnoguera1978@gmail.com
 Teléfono: +57 311 327 5086
-Dirección: Diagonal 150 #141 A-81, Bogotá D.C., Colombia
 
 Para consultas legales, licenciamiento comercial o solicitudes de acceso
 al código fuente, contactar al email indicado arriba.
 
-================================================================================
+
 
 Fecha de vigencia: Enero 2024
 Última actualización: Febrero 2026
 Versión del documento: 1.0
 
-================================================================================
 
 FIN DE LA LICENCIA
