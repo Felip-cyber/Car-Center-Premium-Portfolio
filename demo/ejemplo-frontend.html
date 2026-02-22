@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Car Center Premium - Ejemplo Frontend</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        /**
+         * EJEMPLO: Fragmento de estilos del sistema real
+         * 
+         * NOTA: Este HTML muestra la estructura y patrones utilizados
+         * en el proyecto real, pero es una versión simplificada.
+         * El código completo está en el repositorio privado.
+         */
+
+        .card-stat {
+            border-left: 4px solid #007bff;
+            transition: transform 0.2s;
+        }
+
+        .card-stat:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+
+        .stat-icon {
+            font-size: 2rem;
+            color: #007bff;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- ============================================ -->
+    <!-- NAVBAR (Ejemplo simplificado)                -->
+    <!-- ============================================ -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">
+                🏢 Car Center Premium
+            </a>
+            <div class="navbar-nav ms-auto">
+                <span class="navbar-text text-white">
+                    👤 Usuario: <strong id="usuario-nombre">Cargando...</strong>
+                </span>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container-fluid mt-4">
+        <div class="row">
+            
+            <!-- ============================================ -->
+            <!-- SIDEBAR (Menú lateral)                       -->
+            <!-- ============================================ -->
+            <div class="col-md-2 bg-light">
+                <ul class="nav flex-column">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#">📊 Dashboard</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">📅 Citas</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">👥 Clientes</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">📦 Inventario</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">🛒 POS</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">📊 Reportes</a>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- ============================================ -->
+            <!-- CONTENIDO PRINCIPAL                          -->
+            <!-- ============================================ -->
+            <div class="col-md-10">
+                
+                <h2>Dashboard</h2>
+                <hr>
+
+                <!-- KPIs -->
+                <div class="row mb-4">
+                    <div class="col-md-3">
+                        <div class="card card-stat">
+                            <div class="card-body">
+                                <div class="d-flex justify-content-between">
+                                    <div>
+                                        <p class="text-muted mb-0">Ventas Hoy</p>
+                                        <h3 id="ventas-hoy">$0</h3>
+                                    </div>
+                                    <div class="stat-icon">💰</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-3">
+                        <div class="card card-stat">
+                            <div class="card-body">
+                                <div class="d-flex justify-content-between">
+                                    <div>
+                                        <p class="text-muted mb-0">Citas Hoy</p>
+                                        <h3 id="citas-hoy">0</h3>
+                                    </div>
+                                    <div class="stat-icon">📅</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-3">
+                        <div class="card card-stat">
+                            <div class="card-body">
+                                <div class="d-flex justify-content-between">
+                                    <div>
+                                        <p class="text-muted mb-0">Clientes Nuevos</p>
+                                        <h3 id="clientes-nuevos">0</h3>
+                                    </div>
+                                    <div class="stat-icon">👥</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-3">
+                        <div class="card card-stat">
+                            <div class="card-body">
+                                <div class="d-flex justify-content-between">
+                                    <div>
+                                        <p class="text-muted mb-0">Stock Bajo</p>
+                                        <h3 id="stock-bajo">0</h3>
+                                    </div>
+                                    <div class="stat-icon">📦</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tabla de citas próximas -->
+                <div class="card">
+                    <div class="card-header">
+                        <h5>📅 Citas Próximas</h5>
+                    </div>
+                    <div class="card-body">
+                        <table class="table table-striped" id="tabla-citas">
+                            <thead>
+                                <tr>
+                                    <th>Cliente</th>
+                                    <th>Vehículo</th>
+                                    <th>Fecha/Hora</th>
+                                    <th>Servicio</th>
+                                    <th>Estado</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <!-- Llenado dinámicamente con JavaScript -->
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- ============================================ -->
+    <!-- JAVASCRIPT (Ejemplo de arquitectura)        -->
+    <!-- ============================================ -->
+    <script>
+        /**
+         * PATRÓN UTILIZADO EN EL PROYECTO REAL:
+         * - Vanilla JavaScript (sin frameworks)
+         * - Fetch API para comunicación con backend
+         * - Actualización dinámica del DOM
+         * - Manejo de errores consistente
+         */
+
+        // ============================================
+        // CONFIGURACIÓN
+        // ============================================
+        const API_URL = 'http://localhost:3000/api';
+        
+        // Obtener token de localStorage
+        const getToken = () => localStorage.getItem('token');
+
+        // ============================================
+        // FUNCIONES DE API (Cliente centralizado)
+        // ============================================
+        const api = {
+            /**
+             * GET request genérico
+             */
+            get: async (endpoint) => {
+                try {
+                    const response = await fetch(`${API_URL}${endpoint}`, {
+                        headers: {
+                            'Authorization': `Bearer ${getToken()}`,
+                            'Content-Type': 'application/json'
+                        }
+                    });
+
+                    const data = await response.json();
+
+                    if (!data.success) {
+                        throw new Error(data.error);
+                    }
+
+                    return data.data;
+
+                } catch (error) {
+                    console.error('Error en petición:', error);
+                    mostrarError(error.message);
+                    throw error;
+                }
+            },
+
+            /**
+             * POST request genérico
+             */
+            post: async (endpoint, body) => {
+                try {
+                    const response = await fetch(`${API_URL}${endpoint}`, {
+                        method: 'POST',
+                        headers: {
+                            'Authorization': `Bearer ${getToken()}`,
+                            'Content-Type': 'application/json'
+                        },
+                        body: JSON.stringify(body)
+                    });
+
+                    const data = await response.json();
+
+                    if (!data.success) {
+                        throw new Error(data.error);
+                    }
+
+                    return data.data;
+
+                } catch (error) {
+                    console.error('Error en petición:', error);
+                    mostrarError(error.message);
+                    throw error;
+                }
+            }
+        };
+
+        // ============================================
+        // CARGAR DATOS DEL DASHBOARD
+        // ============================================
+        async function cargarDashboard() {
+            try {
+                // En el código real, estas son peticiones reales a la API
+                // const stats = await api.get('/dashboard/stats');
+                // const citas = await api.get('/citas/proximas');
+
+                // Simulación de datos
+                document.getElementById('ventas-hoy').textContent = '$2,500,000';
+                document.getElementById('citas-hoy').textContent = '8';
+                document.getElementById('clientes-nuevos').textContent = '3';
+                document.getElementById('stock-bajo').textContent = '5';
+
+                cargarTablaCitas();
+
+            } catch (error) {
+                console.error('Error al cargar dashboard:', error);
+            }
+        }
+
+        // ============================================
+        // CARGAR TABLA DE CITAS
+        // ============================================
+        function cargarTablaCitas() {
+            // En el código real, esto viene de la API
+            const citas = [
+                {
+                    cliente: 'Juan Pérez',
+                    vehiculo: 'Toyota Corolla ABC-123',
+                    fecha: '2026-02-22 10:00',
+                    servicio: 'Cambio de aceite',
+                    estado: 'Pendiente'
+                },
+                {
+                    cliente: 'María Gómez',
+                    vehiculo: 'Mazda 3 XYZ-789',
+                    fecha: '2026-02-22 14:00',
+                    servicio: 'Alineación y balanceo',
+                    estado: 'Confirmada'
+                }
+            ];
+
+            const tbody = document.querySelector('#tabla-citas tbody');
+            tbody.innerHTML = '';
+
+            citas.forEach(cita => {
+                const tr = document.createElement('tr');
+                tr.innerHTML = `
+                    <td>${cita.cliente}</td>
+                    <td>${cita.vehiculo}</td>
+                    <td>${cita.fecha}</td>
+                    <td>${cita.servicio}</td>
+                    <td><span class="badge bg-warning">${cita.estado}</span></td>
+                `;
+                tbody.appendChild(tr);
+            });
+        }
+
+        // ============================================
+        // UTILIDADES
+        // ============================================
+        function mostrarError(mensaje) {
+            alert('Error: ' + mensaje);
+            // En el código real, usamos Toastify o SweetAlert2
+        }
+
+        function formatearMoneda(valor) {
+            return new Intl.NumberFormat('es-CO', {
+                style: 'currency',
+                currency: 'COP',
+                minimumFractionDigits: 0
+            }).format(valor);
+        }
+
+        // ============================================
+        // INICIALIZACIÓN
+        // ============================================
+        document.addEventListener('DOMContentLoaded', () => {
+            // Verificar si hay token
+            if (!getToken()) {
+                window.location.href = '/login.html';
+                return;
+            }
+
+            cargarDashboard();
+        });
+
+        /**
+         * NOTAS SOBRE LA ARQUITECTURA REAL:
+         * 
+         * 1. MODULARIZACIÓN:
+         *    - Cada módulo (citas, inventario, etc.) tiene su propio .js
+         *    - Funciones reutilizables en utils.js
+         *    - Cliente API centralizado en api.js
+         * 
+         * 2. MANEJO DE ESTADO:
+         *    - LocalStorage para token y preferencias
+         *    - Variables globales mínimas
+         *    - Estado local en cada módulo
+         * 
+         * 3. ACTUALIZACIONES EN TIEMPO REAL:
+         *    - Polling cada 30 segundos para citas
+         *    - WebSockets en algunos módulos (opcional)
+         * 
+         * 4. VALIDACIONES:
+         *    - Cliente: validaciones básicas (UX)
+         *    - Servidor: validaciones completas (seguridad)
+         * 
+         * 5. RENDIMIENTO:
+         *    - Lazy loading de módulos
+         *    - Caché de datos frecuentes
+         *    - Debounce en búsquedas
+         */
+    </script>
+
+</body>
+</html>

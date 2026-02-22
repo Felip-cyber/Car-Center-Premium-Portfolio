@@ -1,0 +1,175 @@
+LICENCIA PROPIETARIA - CAR CENTER PREMIUM
+
+Copyright © 2024-2026 Javier Felipe Ramirez Noguera
+TODOS LOS DERECHOS RESERVADOS
+
+================================================================================
+
+ESTE ES UN SOFTWARE PROPIETARIO, NO ES CÓDIGO ABIERTO (OPEN SOURCE).
+
+El uso, copia, modificación y distribución de este software y su documentación
+están estrictamente PROHIBIDOS sin la autorización expresa y por escrito del
+titular de los derechos de autor.
+
+================================================================================
+
+TÉRMINOS DE LA LICENCIA PROPIETARIA:
+
+1. TITULARIDAD
+
+   Este software y toda su documentación asociada son propiedad exclusiva de:
+   
+   Javier Felipe Ramirez Noguera
+   C.C. 79.900.503
+   Bogotá D.C., Colombia
+   Email: felipejnoguera1978@gmail.com
+
+2. DERECHOS RESERVADOS
+
+   Todos los derechos sobre este software están reservados, incluyendo pero
+   no limitándose a:
+   
+   - Derechos de autor (copyright)
+   - Derechos morales de autor
+   - Derechos patrimoniales
+   - Derechos de distribución
+   - Derechos de modificación
+   - Derechos de comercialización
+
+3. RESTRICCIONES
+
+   SIN la autorización expresa y por escrito del titular, está PROHIBIDO:
+   
+   a) Copiar el código fuente, parcial o totalmente
+   b) Modificar, adaptar o crear obras derivadas
+   c) Distribuir, vender, alquilar o prestar el software
+   d) Realizar ingeniería inversa (reverse engineering)
+   e) Descompilar o desensamblar el software
+   f) Sublicenciar a terceros
+   g) Usar el software con fines comerciales
+   h) Eliminar o modificar avisos de copyright
+   i) Publicar o compartir el código fuente
+   j) Usar la lógica de negocio en otros proyectos
+
+4. USO PERMITIDO (SIN CÓDIGO FUENTE)
+
+   Este repositorio público de PORTFOLIO permite únicamente:
+   
+   a) Ver la documentación técnica
+   b) Leer la descripción del proyecto
+   c) Consultar la arquitectura del sistema
+   d) Usar como referencia en procesos de selección laboral
+   e) Compartir el link en CV o perfiles profesionales
+
+5. SOLICITUD DE ACCESO AL CÓDIGO
+
+   El código fuente completo está en repositorio PRIVADO.
+   
+   Acceso disponible ÚNICAMENTE para:
+   - Procesos de selección laboral formales
+   - Evaluación técnica por reclutadores verificados
+   - Clientes potenciales con NDA firmado
+   
+   Solicitudes: felipejnoguera1978@gmail.com
+
+6. LICENCIAMIENTO COMERCIAL
+
+   El software está disponible bajo modelo SaaS (Software as a Service).
+   
+   Para contratar una licencia de uso:
+   Email: felipejnoguera1978@gmail.com
+   WhatsApp: +57 311 327 5086
+
+7. GARANTÍAS
+
+   ESTE SOFTWARE SE PROPORCIONA "TAL CUAL", SIN GARANTÍAS DE NINGÚN TIPO,
+   EXPRESAS O IMPLÍCITAS, INCLUYENDO PERO NO LIMITADO A:
+   
+   - Garantías de comerciabilidad
+   - Adecuación para un propósito particular
+   - No violación de derechos de terceros
+   - Funcionamiento ininterrumpido
+   - Ausencia de errores
+
+8. LIMITACIÓN DE RESPONSABILIDAD
+
+   EN NINGÚN CASO EL TITULAR SERÁ RESPONSABLE POR:
+   
+   - Daños directos, indirectos, incidentales o consecuentes
+   - Pérdida de beneficios o datos
+   - Interrupción del negocio
+   - Cualquier daño derivado del uso o imposibilidad de uso del software
+
+9. PROTECCIÓN LEGAL
+
+   Este software está protegido por:
+   
+   - Ley 23 de 1982 (Colombia)
+   - Decisión Andina 351 de 1993
+   - Convenio de Berna (179+ países)
+   - Código Penal Colombiano (Art. 271)
+
+10. SANCIONES POR VIOLACIÓN
+
+    La violación de esta licencia puede resultar en:
+    
+    a) ACCIONES PENALES:
+       - Prisión de 4 a 8 años
+       - Multas hasta 1,000 SMLMV (~$1,300 millones COP)
+    
+    b) ACCIONES CIVILES:
+       - Indemnización por daños y perjuicios
+       - Compensación por lucro cesante
+       - Pago de costas y honorarios legales
+    
+    c) MEDIDAS CAUTELARES:
+       - Decomiso de equipos
+       - Cierre de sitios web
+       - Suspensión de actividades comerciales
+
+11. JURISDICCIÓN
+
+    Cualquier disputa relacionada con este software se regirá por las leyes
+    de la República de Colombia y será sometida a la jurisdicción exclusiva
+    de los tribunales de Bogotá D.C., Colombia.
+
+12. MODIFICACIONES
+
+    El titular se reserva el derecho de modificar estos términos en cualquier
+    momento sin previo aviso. La versión vigente siempre estará disponible
+    en este repositorio.
+
+13. ACEPTACIÓN
+
+    Al acceder a este repositorio, usted reconoce haber leído, comprendido
+    y aceptado estos términos de licencia.
+
+================================================================================
+
+REGISTRO DE PROPIEDAD INTELECTUAL:
+
+Copyright registrado automáticamente desde la creación (Art. 51, Ley 23/1982)
+Registro DNDA (Colombia): En proceso de solicitud
+Evidencia de autoría: 150+ commits en GitHub desde enero 2024
+
+================================================================================
+
+INFORMACIÓN DE CONTACTO:
+
+Titular: Javier Felipe Ramirez Noguera
+Email: felipejnoguera1978@gmail.com
+Teléfono: +57 311 327 5086
+Dirección: Diagonal 150 #141 A-81, Bogotá D.C., Colombia
+
+Para consultas legales, licenciamiento comercial o solicitudes de acceso
+al código fuente, contactar al email indicado arriba.
+
+================================================================================
+
+Fecha de vigencia: Enero 2024
+Última actualización: Febrero 2026
+Versión del documento: 1.0
+
+================================================================================
+
+FIN DE LA LICENCIA

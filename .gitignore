@@ -1,0 +1,80 @@
+# ============================================
+# GITIGNORE - Car Center Premium Portfolio
+# ============================================
+
+# Este repositorio es solo de PORTFOLIO
+# NO contiene código fuente sensible
+
+# ============================================
+# Sistema Operativo
+# ============================================
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+*~
+
+# ============================================
+# IDEs y Editores
+# ============================================
+.vscode/
+.idea/
+*.swp
+*.swo
+*.swn
+.project
+.settings/
+
+# ============================================
+# Node.js (si se agrega en el futuro)
+# ============================================
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+package-lock.json
+yarn.lock
+
+# ============================================
+# Archivos Temporales
+# ============================================
+tmp/
+temp/
+*.tmp
+*.bak
+*.cache
+
+# ============================================
+# Datos Sensibles (por si acaso)
+# ============================================
+.env
+.env.local
+config.js
+secrets/
+*.key
+*.pem
+
+# ============================================
+# Capturas de Pantalla Originales
+# ============================================
+# (Las optimizadas sí se suben)
+screenshots/originales/
+screenshots/*.psd
+
+# ============================================
+# Videos Grandes
+# ============================================
+*.mp4
+*.mov
+*.avi
+# (Los videos se suben a YouTube)
+
+# ============================================
+# Archivos de Trabajo
+# ============================================
+notas.md
+TODO.md
+BORRADOR.md
