@@ -507,7 +507,39 @@ Layered Architecture     # Separación de responsabilidades
 
 ---
 
-## 📸 **Capturas de Pantalla - Características Innovadoras**
+## �️ **Diseño de Base de Datos Relacional**
+
+> **Para reclutadores:** Modelo EER con 9 tablas normalizadas, llaves foráneas, integridad referencial y trazabilidad completa de inventario.
+
+### 📊 Diagrama EER — MySQL Workbench
+
+![Diagrama EER Car Center Premium](screenshots/07-eer-diagrama-bd.png)
+
+### 🧩 Modelo Relacional
+
+| Tabla | Descripción | Relaciones clave |
+|-------|-------------|-----------------|
+| `clientes` | Clientes registrados del taller | → vehiculos, citas, ventas |
+| `vehiculos` | Vehículos vinculados a clientes | ← clientes (FK) |
+| `citas` | Agendamiento de servicios | ← clientes, vehiculos, servicios, tecnicos |
+| `servicios` | Catálogo de servicios del taller | → citas |
+| `tecnicos` | Personal técnico especializado | → citas |
+| `ventas` | Cabecera de ventas POS | ← clientes (FK) |
+| `venta_items` | Detalle de ítems por venta | ← ventas, inventario |
+| `inventario` | Stock de productos y repuestos | → venta_items, movimientos |
+| `movimientos_inventario` | Trazabilidad de entradas/salidas | ← inventario (FK) |
+
+### ⚙️ Decisiones de Diseño
+
+- **Normalización 3FN:** Eliminación de redundancias, datos consistentes
+- **InnoDB + Foreign Keys:** Integridad referencial garantizada por el motor
+- **ENUM para estados:** `pendiente`, `en_proceso`, `completado`, `cancelado` — validación a nivel de BD
+- **TIMESTAMP automático:** `creado` en todas las tablas para trazabilidad
+- **utf8mb4:** Soporte completo de caracteres especiales y emojis en notas
+
+---
+
+## �📸 **Capturas de Pantalla - Características Innovadoras**
 
 > **Sistema real en producción - Car Center Premium, Bogotá**
 
