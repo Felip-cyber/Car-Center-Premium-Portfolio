@@ -11,7 +11,7 @@
 [![License](https://img.shields.io/badge/License-Propietaria-red?style=for-the-badge)](LICENSE.txt)
   [![Estado](https://img.shields.io/badge/Estado-Producci%C3%B3n-success?style=for-the-badge)]()
   [![Desarrollo](https://img.shields.io/badge/Desarrollo-2%20a%C3%B1os-blue?style=for-the-badge)]()
-  [![Líneas](https://img.shields.io/badge/L%C3%ADneas-50K+-orange?style=for-the-badge)]()
+  [![Líneas](https://img.shields.io/badge/L%C3%ADneas-55K+-orange?style=for-the-badge)]()
   [![Tech](https://img.shields.io/badge/Stack-Node.js%20%7C%20MySQL%20%7C%20Vanilla%20JS-green?style=for-the-badge)]()
   
   **Desarrollado por:** Javier Felipe Ramirez Noguera  
@@ -318,6 +318,8 @@ Antes del sistema, el taller manejaba todo en Excel y papel:
 - ✅ Descuentos y promociones
 - ✅ Impresión de facturas térmicas
 - ✅ Actualización automática de inventario
+- ✅ Filtrado por categorías en tiempo real: Aceites, Filtros, Frenos, Baterías, Llantas, Lubricantes
+- ✅ Búsqueda de productos insensible a mayúsculas/minúsculas
 
 ### 📦 **3. Control de Inventario**
 - ✅ Registro de productos con códigos de barra
@@ -332,7 +334,9 @@ Antes del sistema, el taller manejaba todo en Excel y papel:
 - ✅ Gráficos de ventas por período
 - ✅ Análisis de rentabilidad por servicio
 - ✅ Productos más vendidos
-- ✅ Rendimiento por mecánico
+- ✅ Rendimiento por mecánico (datos reales desde API)
+- ✅ Panel de técnicos con gráficas de carga operativa
+- ✅ Historial de vehículos con análisis por estado de servicio
 - ✅ Exportación a Excel/PDF
 
 ### 👥 **5. Gestión de Clientes**
@@ -342,6 +346,8 @@ Antes del sistema, el taller manejaba todo en Excel y papel:
 - ✅ Sistema de puntos y fidelización
 - ✅ Búsqueda rápida por placa/nombre
 - ✅ Notas y alertas personalizadas
+- ✅ KPIs de clientes: total, nuevos este mes, con contacto registrado
+- ✅ Filtros avanzados por nombre, email y teléfono en tiempo real
 
 ### 💰 **6. Facturación Electrónica**
 - ✅ Generación automática de facturas
@@ -489,8 +495,8 @@ Layered Architecture     # Separación de responsabilidades
 | Métrica | Valor | Descripción |
 |---------|-------|-------------|
 | **⏱️ Tiempo de desarrollo** | 24 meses | Enero 2024 - Febrero 2026 |
-| **💻 Líneas de código** | ~50,000+ | Backend + Frontend + Tests |
-| **📝 Commits** | 150+ | Desarrollo incremental documentado |
+| **💻 Líneas de código** | ~55,000+ | Backend + Frontend + Tests |
+| **📝 Commits** | 200+ | Desarrollo incremental documentado |
 | **🧩 Módulos principales** | 12 | Citas, POS, Inventario, Reportes, etc. |
 | **✅ Tests automatizados** | 45+ | Cobertura E2E con Cypress |
 | **👥 Usuarios simultáneos** | 50+ | Capacidad de concurrencia |
@@ -748,6 +754,38 @@ npm run backup      # Backup de BD
 
 ---
 
+## 🆕 **Actualizaciones Recientes**
+
+> **Últimas mejoras implementadas y desplegadas en producción**
+
+### 📡 **Panel Administrativo — Datos Reales desde API**
+
+Se completó la migración de todas las secciones del panel administrativo para consumir datos reales desde los endpoints de la API, eliminando datos estáticos o de ejemplo:
+
+| Sección | Endpoint | Descripción |
+|---------|----------|-------------|
+| **Técnicos** | `/api/tecnicos/public` | KPIs operativos + gráfico doughnut por carga de trabajo + tabla filtrable |
+| **Clientes** | `/api/clientes` | Métricas de crecimiento mensual + gráfico de barras + filtros por nombre/email/teléfono |
+| **Historial** | `/api/citas?limit=500` | Análisis por estado de servicio + gráfico de barras + tabla con búsqueda |
+
+**Impacto:** El panel ahora refleja el estado real del negocio en todo momento, con visualizaciones dinámicas generadas desde Chart.js con datos actualizados.
+
+---
+
+### 🛒 **Sistema POS — Categorías de Productos Corregidas**
+
+Se resolvieron múltiples inconsistencias en el filtrado de productos por categoría dentro del punto de venta:
+
+- **Filtrado insensible a mayúsculas:** La comparación de categorías ahora usa `.toLowerCase()` en ambos lados, garantizando que productos como "Aceites" se filtren correctamente independientemente del formato en la base de datos.
+- **Categorías actualizadas:** El conjunto de categorías del POS se alineó con las categorías reales de la base de datos:
+  - **Aceites** (120+ productos), **Filtros** (35+), **Frenos** (29+)
+  - **Baterías** (21+), **Llantas** (23+), **Lubricantes**
+- **Se eliminaron categorías obsoletas:** `Estética`, `Refrigerantes` y otras que no corresponden al catálogo real del taller.
+
+**Impacto:** Los vendedores pueden navegar correctamente todas las categorías del inventario sin encontrar resultados vacíos.
+
+---
+
 ## 🔮 **Próximas Características** (Roadmap)
 
 ### **En Desarrollo**
@@ -850,8 +888,8 @@ El código está en **repositorio privado** y disponible bajo solicitud para:
 ```
 📅 Fecha inicio: Enero 2024
 📅 Última actualización: Febrero 2026
-⭐ Líneas de código: ~50,000+
-📝 Commits: 150+
+⭐ Líneas de código: ~55,000+
+📝 Commits: 200+
 👥 Usuarios en producción: 15+
 🏢 Empresas usando: 1 (Car Center Premium)
 ```
