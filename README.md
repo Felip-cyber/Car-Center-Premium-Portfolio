@@ -22,7 +22,7 @@
   
   ### 📸 **Vista Previa del Sistema**
   
-  *Sistema profesional en producción con 15+ usuarios activos*
+  *Sistema profesional en producción *
   
 </div>
 
